@@ -6,7 +6,6 @@ import './App.css';
 
 import Recipes from './components/recipes'
 import Spots from './components/spots'
- 
 
 function App() {
   const [articles, setArticles] = useState({ articles:[]});

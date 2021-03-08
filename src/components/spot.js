@@ -1,4 +1,5 @@
 import React from 'react'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 const Spot = ({article}) =>{
     console.log(article.fields);
@@ -8,7 +9,7 @@ const Spot = ({article}) =>{
             <h2>{title}</h2>
             <p><img src={image.fields.file.url} alt="file"/> </p>
 
-            <p>{body}</p>
+            <p>{documentToReactComponents(body)}</p>
         </div>
     )
 }
