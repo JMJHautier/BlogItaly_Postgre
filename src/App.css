@@ -1,5 +1,6 @@
+/* Header NavBar section */
 header {
-    background: white;
+	background-color: white;
     height: 100px;
     width: 100%;
     display: flex;
@@ -10,29 +11,27 @@ header {
 }
 
 nav ul {
-	height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    list-style-type: none;
-    margin: 0 20px 0 60px;
-}
+	margin-top: 20px;
+ }
 
 nav ul li {
-	text-align:left;
-	height: 65px;
-	display: flex;
-	align-items: center;	
+	list-style: none;
+    display: inline-block;
+	padding: 20px;
 }
 
-nav ul a {
+nav ul li a {
 	text-decoration: none;
-    padding: 0 20px 0 20px;
+    display: block;
     font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: #565673;
+    padding: 0 10px;
 }
 
 header .logo{
-	width: 16%; 
+	width: 30%; 
 	height: 5%; 
 }
 
@@ -48,12 +47,35 @@ main {
 	margin-top: 100px; 
 }
 
-.searchBar {
-	height: 30px;
+.search form{
     display: flex;
-    margin: 35px 60px 0 50px;
+	margin: 45px 10px 40px 90px;
+
 }
 
+.searchInput{
+    border: 0;
+    width: 0;
+    transition: width 0.1s ease-in;
+}
+
+.searchInput.active{
+    width: 150px;
+}
+
+.searchInput:focus{
+    outline: none;
+}
+
+.searchIcon{
+    cursor: pointer;
+	width: 100px; 
+}
+
+/* Header NavBar section ends */
+
+
+/* Footer */
 
 footer {
 	background: white;
@@ -62,17 +84,22 @@ footer {
 	display: flex;
 	justify-content: space-between;
 }
-footer ul {
-	height: 100%;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding-inline-start: 0;
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
+
+
+footer ul li {
+	list-style: none;
+    display: inline-block;
+	padding: 20px;
 }
-footer a {
+
+footer ul li a {
 	text-decoration: none;
-    padding: 0 20px 0 20px;
-    font-size: 20px;
+    display: block;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: #565673;
+    padding: 0 10px;
 }
+
+/* Footer ends */

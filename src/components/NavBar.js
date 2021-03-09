@@ -1,9 +1,8 @@
 import React from "react"
 import {NavLink} from "react-router-dom"
 import "./../App.css"
-import logo from "./../assets/img/logo.png"
+import logo from "./../assets/img/logo.jpg"
 import SearchBar from "./SearchBar"
-
 
 const NavBar = () => {
   return (
