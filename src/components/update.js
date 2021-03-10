@@ -16,7 +16,6 @@ const Update = ({id, title, setArticles}) => {
         .then((environment) => environment.getEntry(`${id}`))
         .then((entry) => {
             entry.fields.title['en-US'] = `${newTitle}`;
-            //setArticles((prevArticle)=>({...prevArticle, spots: {...prevArticle.spots, fields:{...prevArticle.spots.fields, title: `${entry.fields.title['en-US']}`} }}));
             return entry.update()
           })
         .then((entry) =>entry.publish())
@@ -32,6 +31,7 @@ const Update = ({id, title, setArticles}) => {
 
   export default Update
 
+            //setArticles((prevArticle)=>({...prevArticle, spots: {...prevArticle.spots, fields:{...prevArticle.spots.fields, title: `${entry.fields.title['en-US']}`} }}));
 
 
   /* Create entry
