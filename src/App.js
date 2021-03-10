@@ -8,6 +8,8 @@ import Footer from "./components/Footer"
 import NavBar from "./components/NavBar"
 import ContactUs from "./components/Contact-us"
 import Login from "./components/Login"
+import "react-multi-carousel/lib/styles.css";
+
 
 const App = () => {
   const [articles, setArticles] = useState({articles: []})

@@ -1,26 +1,38 @@
 import React, {useState} from "react"
 import {documentToReactComponents} from "@contentful/rich-text-react-renderer";
 import Update from './update'
+import {Button, Collapse} from 'react-bootstrap';
 
-const Spot = ({key, article, setArticles}) => {
-  console.log(article.fields)
+const Spot = ({id, article, setArticles, textToShow}) => {
+  console.log(textToShow)
   const {title, body, image} = article.fields
-  const {id} = article.sys;
-  console.log(id);
   const [isEdit, setIsEdit] = useState(false);
+  const [open, setOpen] = useState(false);
+  return (<div>
+    {textToShow === id?
+    (<div className="spot" >      
+      <h2>{title}
+        <Button 
+        variant="light"
+        onClick={()=>setIsEdit(true)}>Edit
+        </Button> 
+        <Button
+        variant="success"
+        onClick={() => setOpen(!open)}
+        aria-controls="example-collapse-text"
+        aria-expanded={open}
+      >
+        Read More
+      </Button>
+</h2>
+{isEdit === true?(<Update id={id} title={title} setArticles={setArticles}/>):(<p></p>)} 
+     
 
-  return (
-    <div className="spot">
-      <h2>{title}</h2> <button onClick={()=>setIsEdit(true)}>Edit</button>
-      {isEdit === true?(<Update key={key} id={id} title={title} setArticles={setArticles}/>):(<p></p>)} 
-      <p>
-        <img src={image.fields.file.url} alt="file" />
-       </p>
+      <Collapse in={open}><p>{documentToReactComponents(body)}</p></Collapse>
 
-      <p>{documentToReactComponents(body)}</p>
+      </div>)
+      :<p></p>}</div>)
       
-    </div>)
-
 
 
 }
