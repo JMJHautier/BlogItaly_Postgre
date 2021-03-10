@@ -44,7 +44,7 @@ const App = () => {
               <Recipes posts={articles.recipes} />
           </Route>
           <Route path="/spots">
-            <Spots posts={articles.spots} />
+            {typeof articles.spots === "undefined"?<p>Loading</p>:<Spots posts={articles.spots} setArticles={setArticles} />}
           </Route>
           <Route path="/contact-us">
               <ContactUs/>
