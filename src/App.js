@@ -1,13 +1,15 @@
-import { useState, useEffect } from "react";
-import { client } from "./client";
-import { Switch, Route } from "react-router-dom";
-import "./App.css";
-import Spots from "./components/spots";
-import Footer from "./components/Footer";
-import NavBar from "./components/NavBar";
-import ContactUs from "./components/Contact-us";
-import Login from "./components/Login";
+import {useState, useEffect} from "react"
+import {client} from "./client"
+import {Switch, Route} from "react-router-dom"
+import "./App.css"
 import Recipes from './components/Recipes/recipes';
+import Spots from "./components/spots"
+import Footer from "./components/Footer"
+import NavBar from "./components/NavBar"
+import ContactUs from "./components/Contact-us"
+import Login from "./components/Login"
+import "react-multi-carousel/lib/styles.css";
+
 
 const App = () => {
   const [articles, setArticles] = useState({ articles: [] });
@@ -36,7 +38,7 @@ const App = () => {
             </Route>
           
           <Route path="/spots">
-            <Spots posts={articles.spots} />
+            {typeof articles.spots === "undefined"?<p>Loading</p>:<Spots posts={articles.spots} setArticles={setArticles} />}
           </Route>
 
           <Route path="/contact-us">
