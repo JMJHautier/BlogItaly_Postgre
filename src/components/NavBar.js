@@ -1,44 +1,43 @@
-import React from "react"
-import {NavLink} from "react-router-dom"
-import "./../App.css"
-import logo from "./../assets/img/logo.jpg"
-import SearchBar from "./SearchBar"
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "./../App.css";
+import SearchBar from "./SearchBar";
 
 const NavBar = () => {
   return (
     <header>
       <NavLink className="selected" to="/">
-        <div>
-          <img className="logo" src={logo} alt="homepage" />
+        <div className="logo">
+         <h3> Foodie <i class="fas fa-globe-europe"> </i>  Travel </h3> 
         </div>
       </NavLink>
       <nav>
         <ul>
           <li>
-            <NavLink className="selected" to="/recipes">
+            <NavLink  className="selected" to="/recipes/:recipeId">
               My recipes
             </NavLink>
           </li>
           <li>
-            <NavLink className="selected" to="spots">
+            <NavLink className="selected" to="/spots">
               My spots
             </NavLink>
           </li>
           <li>
-            <NavLink className="selected" to="contact-us">
+            <NavLink className="selected" to="/contact-us">
               Contact us
             </NavLink>
           </li>
           <li>
-            <NavLink className="selected" to="login">
+            <NavLink className="selected" to="/login">
               Login
             </NavLink>
           </li>
         </ul>
       </nav>
-      <SearchBar /> 
+      <SearchBar />
     </header>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;
