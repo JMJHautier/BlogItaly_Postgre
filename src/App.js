@@ -30,7 +30,7 @@ const App = () => {
       <main>
         <Switch>
           <Route exact path="/">
-            <img
+            <img  
               src="https://www.welgrowgroup.com/blog/wp-content/uploads/2019/05/experiences-food-wine-hero-1-de-bortoli-yarra-valley-estate-victoria-2014-069027-2000x837-1.jpg"
               alt="homepage"
             />

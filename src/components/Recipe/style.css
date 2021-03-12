@@ -1,14 +1,16 @@
 .blogPostContainer {
-  width: 70%;
+  width: 70% !important;
   font-family: 'Dosis', sans-serif;
 }
 
 .blogHeader {
   text-align: center;
+  
 }
 
 .w3-tag  {
   background-color: #e07b5c !important;
+  margin-top: 10px;
 
 }
 .blogCategory {
