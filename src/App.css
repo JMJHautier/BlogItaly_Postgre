@@ -1,27 +1,25 @@
 /* Header NavBar section */
 header {
-
-  background-color: white;
-  min-height: 100px;
-  min-width: 100%;
-  display: flex;
-  justify-content: space-between;
-  font-size: 22px;
+	background-color: white;
+	min-height: 100px;
+	min-width: 100%;
+	display: flex;
+	justify-content: space-between;
+	font-size: 22px;
 }
 
 header .selected {
-  text-decoration: none !important;
-  list-style: none !important;
-  color: #c72c2c; 
+	text-decoration: none !important;
+	list-style: none !important;
+	color: #c72c2c;
 }
-
 
 .App {
 	margin: 0;
 }
 
 body {
-  font-family: 'Dosis', sans-serif;
+	font-family: "Dosis", sans-serif;
 }
 
 main {
@@ -29,9 +27,9 @@ main {
 }
 
 nav {
-  padding-left: 600px;
-  display: flex; 
-  background-color: transparent !important;
+	padding-left: 600px;
+	display: flex;
+	background-color: transparent !important;
 }
 
 nav ul {
@@ -45,79 +43,74 @@ nav ul li {
 }
 
 nav ul li a {
-
-  text-decoration: none;
-  display: block;
-  font-size: 24px;
-  text-transform: capitalize;
-  font-weight: 400;
-  color: #c72c2c;
-  padding: 0 10px;
-  font-weight: 600;
+	text-decoration: none;
+	display: block;
+	font-size: 24px;
+	text-transform: capitalize;
+	font-weight: 400;
+	color: #c72c2c;
+	padding: 0 10px;
+	font-weight: 600;
 }
 
 .logo h3 {
-  font-family: 'Dancing Script';
-  font-size: 42px; 
-  margin-top: 30px;
-  margin-left: 40px;
+	font-family: "Dancing Script";
+	font-size: 42px;
+	margin-top: 30px;
+	margin-left: 40px;
 }
 
 .logo {
-  color: black !important; 
+	color: black !important;
 }
 
 .spot {
 	margin-top: 100px;
 }
 
-
-.search{
-  padding: 0 10px; 
+.search {
+	padding: 0 10px;
 }
 
 .search form {
-  display: flex;
-  margin: 45px 20px 60px 10px;
+	display: flex;
+	margin: 45px 20px 60px 10px;
 }
 
 .searchInput {
-  border: 0;
-  width: 0;
-  transition: width 0.1s ease-in;
-  
+	border: 0;
+	width: 0;
+	transition: width 0.1s ease-in;
 }
 
 .searchInput.active {
-  width: 150px;
-  
+	width: 150px;
 }
 
 .searchInput:focus {
-  outline: none;
-  color: #c72c2c; 
+	outline: none;
+	color: #c72c2c;
 }
 
 .searchIcon {
-  cursor: pointer;
-  width: 200px;
-  margin: 20px;
-  
-} 
+	cursor: pointer;
+	width: 200px;
+	margin: 20px;
+}
 
 /* Header NavBar section ends */
 
 /* Footer */
 
 footer {
-  background: white;
-  height: 65px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 100px 0 0 210px;
-  }
+	background: white;
+	height: 65px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 100px 0 0 210px;
+}
 
 footer ul li {
 	list-style: none;
@@ -126,14 +119,14 @@ footer ul li {
 }
 
 footer ul li a {
-  text-decoration: none;
-  display: block;
-  font-size: 22px;
-  text-transform: capitalize;
-  font-weight: 400;
-  color: #c72c2c; 
-  padding: 0 10px;
-  font-weight: 600;
+	text-decoration: none;
+	display: block;
+	font-size: 22px;
+	text-transform: capitalize;
+	font-weight: 400;
+	color: #c72c2c;
+	padding: 0 10px;
+	font-weight: 600;
 }
 
 /* Footer ends */
@@ -157,6 +150,7 @@ h2 {
 	text-transform: capitalize;
 	font-size: 50px;
 	margin: 0;
+	margin-bottom: 20px;
 	font-weight: 400;
 	font-family: "Dosis", sans-serif;
 }
@@ -171,6 +165,7 @@ h2 {
 	border: 2px solid #ddd;
 	border-radius: 5px;
 	padding: 0px 40px 0px 40px;
+	background-color: rgb(252, 252, 252);
 }
 
 .spots {
@@ -187,6 +182,7 @@ h2 {
 .btn-flat {
 	background-color: #e07b5c;
 	color: white;
+	margin-bottom: 10px;
 }
 .btn-xxl {
 	font-size: 35px;
