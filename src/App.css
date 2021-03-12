@@ -1,6 +1,6 @@
 /* Header NavBar section */
 header {
-  background-color: white;
+  background-color: transparent !important;
   min-height: 100px;
   min-width: 100%;
   display: flex;
@@ -15,11 +15,11 @@ header .selected {
 
 .App {
     margin: 0 auto;  
+    background-image: url("https://image.shutterstock.com/image-photo/mountains-under-mist-morning-amazing-260nw-1725825019.jpg");
 }
 
 body {
   font-family: 'Dosis', sans-serif;
- 
 }
 
 main {
@@ -27,9 +27,12 @@ main {
 }
 
 nav {
-  padding-left: 150px;
+  padding-left: 600px;
   display: flex; 
+  background-color: transparent !important;
+
 }
+
 nav ul {
   margin-top: 20px;
 }
@@ -101,7 +104,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin: 100px 0 0 240px;
   
 }
 
