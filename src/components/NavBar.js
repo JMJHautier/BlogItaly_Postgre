@@ -4,6 +4,8 @@ import "./../App.css";
 import SearchBar from "./SearchBar";
 
 const NavBar = () => {
+  const randomNumber = Math.floor(Math.random() * 5) + 1;  
+
   return (
     <header>
       <NavLink className="selected" to="/">
@@ -12,12 +14,12 @@ const NavBar = () => {
         </div>
       </NavLink>
       <nav>
-        <ul>
-          <li className="item">
-            <NavLink  className="selected" to="/recipes/:recipeId">
+        <ul> 
+          <li className="item"> 
+          <NavLink  className="selected" to={`/recipes/${randomNumber}`}>
               My recipes
             </NavLink>
-          </li>
+          </li> 
           <li className="item">
             <NavLink className="selected" to="/spots">
               My spots
