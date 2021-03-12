@@ -1,102 +1,125 @@
 /* Header NavBar section */
 header {
-	background-color: white;
-	height: 100px;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	position: fixed;
-	z-index: 100;
-	top: 0;
+
+  background-color: white;
+  min-height: 100px;
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
 }
 
+header .selected {
+  text-decoration: none !important;
+  list-style: none !important;
+}
+
+.App {
+    margin: 0 auto;  
+}
+
+body {
+  font-family: 'Dosis', sans-serif;
+ 
+
+main {
+  overflow: hidden;
+}
+
+nav {
+  padding-left: 150px;
+  display: flex; 
+}
 nav ul {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 
 nav ul li {
-	list-style: none;
-	display: inline-block;
-	padding: 20px;
+  list-style: none;
+  display: inline-block;
+  padding: 20px;
 }
 
 nav ul li a {
-	text-decoration: none;
-	display: block;
-	font-size: 20px;
-	text-transform: capitalize;
-	font-weight: 400;
-	color: #565673;
-	padding: 0 10px;
+  text-decoration: none;
+  display: block;
+  font-size: 24px;
+  text-transform: capitalize;
+  font-weight: 400;
+  color: #565673;
+  padding: 0 10px;
 }
 
-header .logo {
-	width: 30%;
-	height: 5%;
-}
 
-main {
-	overflow-x: hidden;
-}
-
-.recipes {
-	margin-top: 100px;
+.logo h3 {
+  font-family: 'Dancing Script';
+  font-size: 42px; 
+  
 }
 
 .spot {
-	margin-top: 100px;
+  margin-top: 100px;
+}
+
+.search{
+  padding: 0 70px; 
 }
 
 .search form {
-	display: flex;
-	margin: 45px 10px 40px 90px;
+  display: flex;
+  margin: 45px 10px 40px 10px;
 }
 
 .searchInput {
-	border: 0;
-	width: 0;
-	transition: width 0.1s ease-in;
-}
+  border: 0;
+  width: 0;
+  transition: width 0.1s ease-in;
+
 
 .searchInput.active {
-	width: 150px;
+  width: 150px;
 }
 
+
 .searchInput:focus {
-	outline: none;
+  outline: none;
 }
 
 .searchIcon {
-	cursor: pointer;
-	width: 100px;
-}
+  cursor: pointer;
+  width: 200px;
+  margin: 20px
+} 
 
 /* Header NavBar section ends */
 
 /* Footer */
 
 footer {
-	background: white;
-	height: 65px;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
+  background: white;
+  height: 65px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  
 }
 
 footer ul li {
-	list-style: none;
-	display: inline-block;
-	padding: 20px;
+  list-style: none;
+  display: inline-block;
+  padding: 20px;
 }
 
 footer ul li a {
-	text-decoration: none;
-	display: block;
-	font-size: 18px;
-	text-transform: capitalize;
-	font-weight: 400;
-	color: #565673;
-	padding: 0 10px;
+  text-decoration: none;
+  display: block;
+  font-size: 22px;
+  text-transform: capitalize;
+  font-weight: 400;
+  color: #565673;
+  padding: 0 10px;
 }
 
 /* Footer ends */

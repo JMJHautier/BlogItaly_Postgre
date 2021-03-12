@@ -1,0 +1,72 @@
+.blogPostContainer {
+  width: 70%;
+  font-family: 'Dosis', sans-serif;
+}
+
+.blogHeader {
+  text-align: center;
+}
+
+.w3-tag  {
+  background-color: #e07b5c !important;
+
+}
+.blogCategory {
+  font-size: 20px;
+}
+
+.postTitle {
+  letter-spacing: 0;
+  line-height: 1.3em;
+  text-transform: capitalize;
+  font-size: 50px;
+  margin: 0;
+  font-weight: 400;
+  font-family: 'Dosis', sans-serif;
+}
+
+.postedBy {
+  font-size: 18px;
+  font-style: italic;
+  padding: 10px 0;
+  display: block;
+  color: #6c6c6c;
+}
+
+.recipeImage {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 10px 0;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+.recipeImage img {
+  max-width: 80%;
+  max-height: 80%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.recipeContent {
+  margin: 10px; 
+  padding: 0 25px;
+}
+
+.recipeContent h3 {
+  font-weight: 600; 
+  color: #333; 
+  font-size: 22px;
+}
+
+.recipeContent p {
+  font-size: 20px; 
+  color: #333; 
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding-bottom: 20px 0; 
+}
