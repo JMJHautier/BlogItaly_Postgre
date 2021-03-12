@@ -20,21 +20,23 @@ const Spot = ({id, article, setRenameTitle, textToShow}) => {
             onClick={()=>{setIsEdit(true);setHideForm(false)}}>Edit
             </Button> 
 
+
+            </h2>
+
+            {isEdit?
+                (<Update id={id} title={title} setRenameTitle={setRenameTitle} hideForm={hideForm} setHideForm={setHideForm}/>)
+                :(<span></span>)
+            } 
+            
             <Button
-            variant="success"
+            variant="flat"
+            size="xxl"
             onClick={() => setOpen(!open)}
             aria-controls="example-collapse-text"
             aria-expanded={open}
         >
             Read More
         </Button>
-            </h2>
-            
-            {isEdit?
-                (<Update id={id} title={title} setRenameTitle={setRenameTitle} hideForm={hideForm} setHideForm={setHideForm}/>)
-                :(<span></span>)
-            } 
-            
 
             <Collapse in={open} >
                 <div>{documentToReactComponents(body)}</div> 

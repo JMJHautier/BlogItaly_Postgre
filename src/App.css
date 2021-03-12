@@ -1,11 +1,11 @@
 /* Header NavBar section */
 header {
-  background-color: white;
-  min-height: 100px;
-  min-width: 100%;
-  display: flex;
-  justify-content: space-between;
-  font-size: 22px;
+	background-color: white;
+	min-height: 100px;
+	min-width: 100%;
+	display: flex;
+	justify-content: space-between;
+	font-size: 22px;
 }
 
 header .selected {
@@ -18,16 +18,17 @@ header .selected {
   border-bottom: 4px solid #b84e4e;
 }
 
+
 .App {
-    margin: 0 auto;  
+	margin: 0;
 }
 
 body {
-  font-family: 'Dosis', sans-serif;
+	font-family: "Dosis", sans-serif;
 }
 
 main {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 nav {
@@ -42,13 +43,13 @@ nav {
 
 
 nav ul {
-  margin-top: 20px;
+	margin-top: 20px;
 }
 
 nav ul li {
-  list-style: none;
-  display: inline-block;
-  padding: 20px;
+	list-style: none;
+	display: inline-block;
+	padding: 20px;
 }
 
 nav ul li a {
@@ -62,21 +63,21 @@ nav ul li a {
   font-weight: 600;
 }
 
-
 .logo h3 {
-  font-family: 'Dancing Script';
-  font-size: 42px; 
-  margin-top: 30px;
-  margin-left: 40px;
+	font-family: "Dancing Script";
+	font-size: 42px;
+	margin-top: 30px;
+	margin-left: 40px;
 }
 
 .logo {
-  color: black !important; 
+	color: black !important;
 }
 
 .spot {
-  margin-top: 100px;
+	margin-top: 100px;
 }
+
 
 .search{
   padding: 0 10px; 
@@ -87,18 +88,17 @@ nav ul li a {
 .search form {
   display: flex;
   margin: 40px 100px 40px 0;
+
 }
 
 .searchInput {
-  border: 0;
-  width: 0;
-  transition: width 0.1s ease-in;
-  
+	border: 0;
+	width: 0;
+	transition: width 0.1s ease-in;
 }
 
 .searchInput.active {
-  width: 150px;
-  
+	width: 150px;
 }
 
 .searchInput:focus {
@@ -113,25 +113,25 @@ nav ul li a {
   
 } 
 
+
 /* Header NavBar section ends */
 
 /* Footer */
 
 footer {
-  background: white;
-  height: 65px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 100px 0 0 210px;
-  
+	background: white;
+	height: 65px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 100px 0 0 210px;
 }
 
 footer ul li {
-  list-style: none;
-  display: inline-block;
-  padding: 20px;
+	list-style: none;
+	display: inline-block;
+	padding: 20px;
 }
 
 footer ul li a {
@@ -143,7 +143,6 @@ footer ul li a {
   color: #000; 
   padding: 0 10px;
   font-weight: 600;
-
 }
 
 /* Footer ends */
@@ -162,8 +161,14 @@ footer ul li a {
 
 h2 {
 	text-align: center;
+	letter-spacing: 0;
+	line-height: 1.3em;
+	text-transform: capitalize;
 	font-size: 50px;
-	font-weight: 800;
+	margin: 0;
+	margin-bottom: 20px;
+	font-weight: 400;
+	font-family: "Dosis", sans-serif;
 }
 
 /*Spot css ends*/
@@ -173,6 +178,29 @@ h2 {
 }
 .allspots {
 	text-align: center;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+	padding: 0px 40px 0px 40px;
+	background-color: rgb(252, 252, 252);
 }
 
+.spots {
+	font-family: "Dosis", sans-serif;
+}
+.tag {
+	background-color: #e07b5c;
+	color: white;
+	padding: 5px;
+	font-size: 20px;
+	border-radius: 10px;
+}
+
+.btn-flat {
+	background-color: #e07b5c;
+	color: white;
+	margin-bottom: 10px;
+}
+.btn-xxl {
+	font-size: 35px;
+}
 /*Spot css ends*/
