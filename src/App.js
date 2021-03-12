@@ -2,7 +2,7 @@ import {useState, useEffect} from "react"
 import {client} from "./client"
 import {Switch, Route} from "react-router-dom"
 import "./App.css"
-import Recipes from "./components/recipes"
+import Recipes from './components/Recipes/recipes';
 import Spots from "./components/spots"
 import Footer from "./components/Footer"
 import NavBar from "./components/NavBar"
@@ -12,24 +12,16 @@ import "react-multi-carousel/lib/styles.css";
 
 
 const App = () => {
-  const [articles, setArticles] = useState({articles: []})
+  const [articles, setArticles] = useState({ articles: [] });
 
   useEffect(() => {
-    const getRecipes = () => {
-      client.getEntries({content_type: "recipeBlog"}).then(response => {
-        setArticles({
-          recipes: response.items,
-        })
-      })
-    }
     const getSpots = () => {
-      client.getEntries({content_type: "spot"}).then(response => {
-        setArticles(prevArticle => ({...prevArticle, spots: response.items}))
-      })
-    }
-    getRecipes()
-    getSpots()
-  }, [])
+      client.getEntries({ content_type: "spot" }).then(response => {
+        setArticles(prevArticle => ({ ...prevArticle, spots: response.items }));
+      });
+    };
+    getSpots();
+  }, []);
 
   return (
     <div>
@@ -42,23 +34,27 @@ const App = () => {
               alt="homepage"
             />
           </Route>
-          <Route path="/recipes">
-              <Recipes posts={articles.recipes} />
-          </Route>
+          <Route path="/recipes/:recipeId" component={Recipes}>
+            </Route>
+          
           <Route path="/spots">
             {typeof articles.spots === "undefined"?<p>Loading</p>:<Spots posts={articles.spots} setArticles={setArticles} />}
           </Route>
+
           <Route path="/contact-us">
-              <ContactUs/>
+            <ContactUs />
           </Route>
           <Route path="/login">
-              <Login/>
+            <Login />
           </Route>
         </Switch>
       </main>
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
+
