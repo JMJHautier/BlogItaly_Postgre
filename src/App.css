@@ -11,9 +11,12 @@ header {
 header .selected {
   text-decoration: none !important;
   list-style: none !important;
-  color: #c72c2c; 
+  color: black ;
 }
 
+.item .active.selected {
+  border-bottom: 4px solid #b84e4e;
+}
 
 .App {
     margin: 0 auto;  
@@ -28,11 +31,15 @@ main {
 }
 
 nav {
-  padding-left: 600px;
-  display: flex; 
+  justify-content: center;
+  align-items: center;
   background-color: transparent !important;
-
 }
+
+ ul li a:hover {
+  color: #b84e4e;
+}
+
 
 nav ul {
   margin-top: 20px;
@@ -50,7 +57,7 @@ nav ul li a {
   font-size: 24px;
   text-transform: capitalize;
   font-weight: 400;
-  color: #c72c2c;
+  color: #b84e4e;
   padding: 0 10px;
   font-weight: 600;
 }
@@ -73,11 +80,13 @@ nav ul li a {
 
 .search{
   padding: 0 10px; 
+  display: flex; 
+
 }
 
 .search form {
   display: flex;
-  margin: 45px 20px 60px 10px;
+  margin: 40px 100px 40px 0;
 }
 
 .searchInput {
@@ -94,13 +103,13 @@ nav ul li a {
 
 .searchInput:focus {
   outline: none;
-  color: #c72c2c; 
+  color: #b84e4e; 
 }
 
 .searchIcon {
   cursor: pointer;
   width: 200px;
-  margin: 20px;
+  margin: 40px; 
   
 } 
 
@@ -131,7 +140,7 @@ footer ul li a {
   font-size: 22px;
   text-transform: capitalize;
   font-weight: 400;
-  color: #c72c2c; 
+  color: #000; 
   padding: 0 10px;
   font-weight: 600;
 
