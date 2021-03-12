@@ -12,24 +12,24 @@ import "react-multi-carousel/lib/styles.css";
 
 
 const App = () => {
-  const [articles, setArticles] = useState({articles: []})
-
+  const [articles, setArticles] = useState([])
+  const [renameTitle, setRenameTitle] = useState('');
   useEffect(() => {
     const getRecipes = () => {
       client.getEntries({content_type: "recipeBlog"}).then(response => {
-        setArticles({
-          recipes: response.items,
-        })
-      })
-    }
+        setArticles((prevArticle) =>({...prevArticle,
+          recipes: response.items
+        }))})}
+    
     const getSpots = () => {
-      client.getEntries({content_type: "spot"}).then(response => {
+      try{client.getEntries({content_type: "spot"}).then(response => {
         setArticles(prevArticle => ({...prevArticle, spots: response.items}))
-      })
+      })}catch(error) {console.log(error)};
+      console.log(`Updated with ${renameTitle}!`)
     }
     getRecipes()
     getSpots()
-  }, [])
+  }, [renameTitle])
 
   return (
     <div>
@@ -46,7 +46,8 @@ const App = () => {
               <Recipes posts={articles.recipes} />
           </Route>
           <Route path="/spots">
-            {typeof articles.spots === "undefined"?<p>Loading</p>:<Spots posts={articles.spots} setArticles={setArticles} />}
+            {typeof articles.spots === "undefined"?<p>Loading</p>
+            :<Spots posts={articles.spots} setRenameTitle={setRenameTitle}/>}
           </Route>
           <Route path="/contact-us">
               <ContactUs/>

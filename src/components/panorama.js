@@ -1,8 +1,7 @@
-import React, {useState} from "react"
+import React from "react"
 
 const Panorama = ({id, article, setTextToShow}) => {
-    console.log(`${id}`);
-    const {image, title} = article.fields
+    const {image} = article.fields
     return (<img onClick={()=>setTextToShow(`${id}`)} src={image.fields.file.url} alt="file" draggable={false}
     style={{ width: "100%", height: "100%" }}/>)
   }
