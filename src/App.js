@@ -3,7 +3,7 @@ import {client} from "./client"
 import {Switch, Route} from "react-router-dom"
 import "./App.css"
 import Recipes from './components/Recipes/recipes';
-import Spots from "./components/spots"
+import Spots from "./components/Spots/spots"
 import Footer from "./components/Footer"
 import NavBar from "./components/NavBar"
 import ContactUs from "./components/Contact-us"
@@ -12,17 +12,28 @@ import "react-multi-carousel/lib/styles.css";
 
 
 const App = () => {
-  const [articles, setArticles] = useState([])
+  const [articles, setArticles] = useState('')
   const [renameTitle, setRenameTitle] = useState('');
-  useEffect(() => {
-    const getSpots = () => {
-      try{client.getEntries({content_type: "spot"}).then(response => {
-        setArticles(prevArticle => ({...prevArticle, spots: response.items}))
-      })}catch(error) {console.log(error)};
-      console.log(`Updated with ${renameTitle}!`)
-    }
-    getSpots()
-  }, [renameTitle])
+
+//* Getting the spots with PostGre 
+
+  useEffect(()=> {
+    fetch('http://localhost:3001/spots')
+    .then(res  => res.json())
+    .then(data => setArticles(data))
+  }, []);
+
+
+  //* Getting the spots with Contentful 
+  // useEffect(() => {
+  //   const getSpots = () => {
+  //     try{client.getEntries({content_type: "spot"}).then(response => {
+  //       setArticles(prevArticle => ({...prevArticle, spots: response.items}))
+  //     })}catch(error) {console.log(error)};
+  //     console.log(`Updated with ${renameTitle}!`)
+  //   }
+  //   getSpots()
+  // }, [renameTitle])
 
   return (
     <div>
@@ -39,8 +50,7 @@ const App = () => {
             </Route>
           
           <Route path="/spots">
-            {typeof articles.spots === "undefined"?<p>Loading</p>
-            :<Spots posts={articles.spots} setRenameTitle={setRenameTitle}/>}
+            {articles?<Spots articles={articles} setRenameTitle={setRenameTitle}/>:<p>Loading...</p>}
           </Route>
 
           <Route path="/contact-us">

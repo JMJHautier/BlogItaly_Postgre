@@ -2,8 +2,9 @@ import React, {useState} from "react"
 import Spot from "./spot.js"
 import Panorama from "./panorama"
 import Carousel from "react-multi-carousel";
+import "./style.css";
 
-const Spots = ({posts, setRenameTitle}) => {
+const Spots = ({articles, setRenameTitle}) => {
     
     // Set up for Carousel
    
@@ -58,12 +59,12 @@ const Spots = ({posts, setRenameTitle}) => {
                     slidesToSlide={1}
                     swipeable
         >
-                {posts.map(article =><div><Panorama key={article.sys.id} id={article.sys.id} article={article} setTextToShow={setTextToShow}/></div>
+                {articles.map(article =><div><Panorama key={article.id} id={article.id} article={article} setTextToShow={setTextToShow}/></div>
                     )}
                 </Carousel>  </div>
           
     
-            <div class="allspots"> {posts.map(article => {return <Spot key={article.sys.id} id={article.sys.id} article={article} setRenameTitle={setRenameTitle} textToShow ={textToShow}/>})}
+            <div class="allspots"> {articles.map(article => {return <Spot key={article.id} id={article.id} article={article} setRenameTitle={setRenameTitle} textToShow ={textToShow}/>})}
             </div>
 </div>)
       }

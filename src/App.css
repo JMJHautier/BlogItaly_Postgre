@@ -9,15 +9,14 @@ header {
 }
 
 header .selected {
-  text-decoration: none !important;
-  list-style: none !important;
-  color: black ;
+	text-decoration: none !important;
+	list-style: none !important;
+	color: black;
 }
 
 .item .active.selected {
-  border-bottom: 4px solid #b84e4e;
+	border-bottom: 4px solid #b84e4e;
 }
-
 
 .App {
 	margin: 0;
@@ -32,15 +31,14 @@ main {
 }
 
 nav {
-  justify-content: center;
-  align-items: center;
-  background-color: transparent !important;
+	justify-content: center;
+	align-items: center;
+	background-color: transparent !important;
 }
 
- ul li a:hover {
-  color: #b84e4e;
+ul li a:hover {
+	color: #b84e4e;
 }
-
 
 nav ul {
 	margin-top: 20px;
@@ -53,14 +51,14 @@ nav ul li {
 }
 
 nav ul li a {
-  text-decoration: none;
-  display: block;
-  font-size: 24px;
-  text-transform: capitalize;
-  font-weight: 400;
-  color: #b84e4e;
-  padding: 0 10px;
-  font-weight: 600;
+	text-decoration: none;
+	display: block;
+	font-size: 24px;
+	text-transform: capitalize;
+	font-weight: 400;
+	color: #b84e4e;
+	padding: 0 10px;
+	font-weight: 600;
 }
 
 .logo h3 {
@@ -78,17 +76,14 @@ nav ul li a {
 	margin-top: 100px;
 }
 
-
-.search{
-  padding: 0 10px; 
-  display: flex; 
-
+.search {
+	padding: 0 10px;
+	display: flex;
 }
 
 .search form {
-  display: flex;
-  margin: 40px 100px 40px 0;
-
+	display: flex;
+	margin: 40px 100px 40px 0;
 }
 
 .searchInput {
@@ -102,17 +97,15 @@ nav ul li a {
 }
 
 .searchInput:focus {
-  outline: none;
-  color: #b84e4e; 
+	outline: none;
+	color: #b84e4e;
 }
 
 .searchIcon {
-  cursor: pointer;
-  width: 200px;
-  margin: 40px; 
-  
-} 
-
+	cursor: pointer;
+	width: 200px;
+	margin: 40px;
+}
 
 /* Header NavBar section ends */
 
@@ -135,72 +128,14 @@ footer ul li {
 }
 
 footer ul li a {
-  text-decoration: none;
-  display: block;
-  font-size: 22px;
-  text-transform: capitalize;
-  font-weight: 400;
-  color: #000; 
-  padding: 0 10px;
-  font-weight: 600;
+	text-decoration: none;
+	display: block;
+	font-size: 22px;
+	text-transform: capitalize;
+	font-weight: 400;
+	color: #000;
+	padding: 0 10px;
+	font-weight: 600;
 }
 
 /* Footer ends */
-
-/* Spot css starts*/
-.carousel img {
-	width: 400px;
-	object-fit: cover;
-	object-position: center;
-}
-.carousel {
-	width: 100%;
-	height: 500px;
-	overflow: hidden;
-}
-
-h2 {
-	text-align: center;
-	letter-spacing: 0;
-	line-height: 1.3em;
-	text-transform: capitalize;
-	font-size: 50px;
-	margin: 0;
-	margin-bottom: 20px;
-	font-weight: 400;
-	font-family: "Dosis", sans-serif;
-}
-
-/*Spot css ends*/
-.allspots {
-	width: 50%;
-	margin: auto;
-}
-.allspots {
-	text-align: center;
-	border: 2px solid #ddd;
-	border-radius: 5px;
-	padding: 0px 40px 0px 40px;
-	background-color: rgb(252, 252, 252);
-}
-
-.spots {
-	font-family: "Dosis", sans-serif;
-}
-.tag {
-	background-color: #e07b5c;
-	color: white;
-	padding: 5px;
-	font-size: 20px;
-	border-radius: 10px;
-}
-
-.btn-flat {
-	background-color: #e07b5c;
-	color: white;
-	margin-bottom: 10px;
-}
-.btn-xxl {
-	font-size: 35px;
-}
-/*Spot css ends*/

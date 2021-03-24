@@ -2,13 +2,15 @@ import React, {useState} from "react"
 import {documentToReactComponents} from "@contentful/rich-text-react-renderer";
 import Update from './update'
 import {Button, Collapse} from 'react-bootstrap';
+import "./style.css";
 
 const Spot = ({id, article, setRenameTitle, textToShow}) => {
-  const {title, body} = article.fields
+  const {title, body} = article
   const [isEdit, setIsEdit] = useState(false);
   const [hideForm, setHideForm] = useState(true);
   const [open, setOpen] = useState(false);
-    const contentfulLink = "https://app.contentful.com/spaces/oquthnn4rslh/entries/" + id;
+
+    // const contentfulLink = "https://app.contentful.com/spaces/oquthnn4rslh/entries/" + id;
   return (
     <div>
     {textToShow === id?
@@ -39,11 +41,13 @@ const Spot = ({id, article, setRenameTitle, textToShow}) => {
         </Button>
 
             <Collapse in={open} >
-                <div>{documentToReactComponents(body)}</div> 
+                <div>{body}</div> 
             </Collapse>
             <Button 
             hidden={!open} variant="light"
-            onClick={()=>window.open(contentfulLink)}>Edit
+            onClick={()=>window.open()}
+            >
+                Edit
             </Button> 
         </div>)
         :console.log(`${title} is not shown`)}
