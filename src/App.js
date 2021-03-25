@@ -1,5 +1,4 @@
 import {useState, useEffect} from "react"
-import {client} from "./client"
 import {Switch, Route} from "react-router-dom"
 import "./App.css"
 import Recipes from './components/Recipes/recipes';
