@@ -5,10 +5,11 @@ import "./style.css";
 import { NavLink } from "react-router-dom";
 import { client } from "../../client";
 
-const SideBar = (props) => {
-  const [articles, setArticles] = useState({ articles: [] });
+const SideBar = () => {
+  const [articles, setArticles] = useState('');
 
-  useEffect(() => {
+
+ /*  useEffect(() => {
     const getRecipes = () => {
       client.getEntries({ content_type: "recipeBlog" }).then(response => {
         setArticles({
@@ -17,9 +18,13 @@ const SideBar = (props) => {
       });
     };
     getRecipes();
+  }, []); */
+  
+  useEffect(()=> {
+    fetch('http://localhost:3001/recipes')
+    .then(res  => res.json())
+    .then(data => setArticles(data))
   }, []);
-
-  const recipes = articles.recipes;
 
   return (
     <div className="sideBarContainer">
@@ -68,13 +73,13 @@ const SideBar = (props) => {
           <span> Recent Posts </span>
         </div>
 
-        {articles.recipes && recipes.map(recipe => {
+        {articles && articles.map(article => {
           return (
             <div className="recentPosts">
-              <NavLink key={recipe.fields.id} to={`/recipes/${recipe.fields.id}`}>
+              <NavLink key={article.id} to={`/recipes/${article.id}`}>
                 <div className="recentPost">
-                  <h3>{recipes && recipe.fields.name}</h3>
-                  <span> {recipes && recipe.fields.postedOn} </span>
+                  <h3>{article.name}</h3>
+                  <span> {article.posted_on} </span>
                 </div>
               </NavLink>
             </div>
