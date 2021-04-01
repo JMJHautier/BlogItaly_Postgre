@@ -12,7 +12,7 @@ import "react-multi-carousel/lib/styles.css";
 
 const App = () => {
   const [articles, setArticles] = useState('')
-  const [renameTitle, setRenameTitle] = useState('');
+  const [spotModified, setSpotModified] = useState('');
 
 //* Getting the spots with PostGre 
 
@@ -20,7 +20,7 @@ const App = () => {
     fetch('http://localhost:3001/spots')
     .then(res  => res.json())
     .then(data => setArticles(data))
-  }, []);
+  }, [spotModified]);
 
 
   //* Getting the spots with Contentful 
@@ -49,7 +49,7 @@ const App = () => {
             </Route>
           
           <Route path="/spots">
-            {articles?<Spots articles={articles} setRenameTitle={setRenameTitle}/>:<p>Loading...</p>}
+            {articles?<Spots articles={articles} setSpotModified={setSpotModified}/>:<p>Loading...</p>}
           </Route>
 
           <Route path="/contact-us">

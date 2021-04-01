@@ -1,57 +1,84 @@
 /* Spot css starts*/
 .carousel img {
-	width: 400px;
-	object-fit: cover;
-	object-position: center;
+  width: 400px;
+  object-fit: cover;
+  object-position: center;
 }
 .carousel {
-	width: 100%;
-	height: 500px;
-	overflow: hidden;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
 }
 
 h2 {
-	text-align: center;
-	letter-spacing: 0;
-	line-height: 1.3em;
-	text-transform: capitalize;
-	font-size: 50px;
-	margin: 0;
-	margin-bottom: 20px;
-	font-weight: 400;
-	font-family: "Dosis", sans-serif;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 1.3em;
+  text-transform: capitalize;
+  font-size: 50px;
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-family: "Dosis", sans-serif;
 }
 
 /*Spot css ends*/
 .allspots {
-	width: 50%;
-	margin: auto;
+  width: 50%;
+  margin: auto;
 }
 .allspots {
-	text-align: center;
-	border: 2px solid #ddd;
-	border-radius: 5px;
-	padding: 0px 40px 0px 40px;
-	background-color: rgb(252, 252, 252);
+  text-align: center;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 0px 40px 0px 40px;
+  background-color: rgb(252, 252, 252);
 }
 
 .spots {
-	font-family: "Dosis", sans-serif;
+  width: 100vw;
+  font-family: "Dosis", sans-serif;
 }
 .tag {
-	background-color: #e07b5c;
-	color: white;
-	padding: 5px;
-	font-size: 20px;
-	border-radius: 10px;
+  background-color: #e07b5c;
+  color: white;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 10px;
 }
 
 .btn-flat {
-	background-color: #e07b5c;
-	color: white;
-	margin-bottom: 10px;
+  background-color: #e07b5c;
+  color: white;
+  margin-bottom: 10px;
 }
+
+.btn-green {
+  background-color: green;
+  color: white;
+  width: 10%;
+  margin: 10px 45% 10px 45%;
+}
+.btn-red {
+  background-color: red;
+  color: white;
+  margin: 10px 15px 10px 15px;
+}
+.btn-edit {
+  background-color: blue;
+  color: white;
+  margin: 10px 15px 10px 15px;
+}
+
 .btn-xxl {
-	font-size: 35px;
+  font-size: 35px;
+}
+
+textarea {
+  width: 200%;
+}
+
+.createSpot {
+  margin: 20px 45% 20px 45%;
 }
 /*Spot css ends*/
