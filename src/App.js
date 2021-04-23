@@ -13,16 +13,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Spinner from "./components/Spinner";
 
 const App = () => {
-  const [articles, setArticles] = useState("");
-  const [renameTitle, setRenameTitle] = useState("");
+  const [articles, setArticles] = useState('')
+  const [spotModified, setSpotModified] = useState('');
 
   //* Getting the spots with PostGre
 
-  useEffect(() => {
-    fetch("http://localhost:3001/spots")
-      .then(res => res.json())
-      .then(data => setArticles(data));
-  }, []);
+  useEffect(()=> {
+    fetch('http://localhost:3001/spots')
+    .then(res  => res.json())
+    .then(data => setArticles(data))
+  }, [spotModified]);
 
   //* Getting the spots with Contentful
   // useEffect(() => {
@@ -48,11 +48,9 @@ const App = () => {
           </Route>
 
           <Route path="/spots">
-            {articles ? (
-              <Spots articles={articles} setRenameTitle={setRenameTitle} />
-            ) : (
-              <Spinner/>
-            )}
+
+            {articles?<Spots articles={articles} setSpotModified={setSpotModified}/>:<p>Loading...</p>}
+
           </Route>
 
           <Route path="/contact-us">

@@ -3,13 +3,17 @@ import Spot from "./spot.js"
 import Panorama from "./panorama"
 import Carousel from "react-multi-carousel";
 import "./style.css";
+import New from './controllers/new';
+import {Button} from 'react-bootstrap';
 
-const Spots = ({articles, setRenameTitle}) => {
-    
-    // Set up for Carousel
-   
-      // end of Carousel set up 
+const Spots = ({articles, setSpotModified}) => {
+
+
   const [textToShow, setTextToShow] = useState('');
+  const[isNew, setIsNew] = useState(false);
+  const[hideNew, setHideNew] = useState(false);
+
+
   return (
     <div className="spots"> 
     <div className="carousel">
@@ -64,15 +68,22 @@ const Spots = ({articles, setRenameTitle}) => {
                 </Carousel>  </div>
           
     
-            <div class="allspots"> {articles.map(article => {return <Spot key={article.id} id={article.id} article={article} setRenameTitle={setRenameTitle} textToShow ={textToShow}/>})}
+            <div class="allspots"> {articles.map(article => {return <Spot key={article.id} id={article.id} article={article} setSpotModified={setSpotModified} textToShow ={textToShow}/>})}
             </div>
+
+            <Button 
+                variant="green"
+                size="xxl"
+            onClick={()=>{setIsNew(true);setHideNew(!hideNew)}}>New
+            </Button> 
+
+            {isNew?
+                (<New hideNew={hideNew} setHideNew={setHideNew} setSpotModified={setSpotModified} />)
+                :(<span></span>)
+            }
+
 </div>)
       }
 
 
 export default Spots
-/* Carousel bootstrap: 
-
-<Carousel.Item><Panorama id={article.sys.id} article={article} setTextToShow={setTextToShow}/><Carousel.Caption>{article.fields.title}</Carousel.Caption></Carousel.Item>
-            )}
-        </Carousel> */
