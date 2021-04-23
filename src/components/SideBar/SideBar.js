@@ -79,7 +79,6 @@ const SideBar = () => {
               <NavLink key={article.id} to={`/recipes/${article.id}`}>
                 <div className="recentPost">
                   <h3>{article.name}</h3>
-                  <span> {article.posted_on} </span>
                 </div>
               </NavLink>
             </div>

@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 import Card from "../Card/Card";
 import { useParams } from "react-router-dom";
+import Spinner from "../Spinner";
 
-const Recipe = () => {
+const Recipe = (props) => {
   const [articles, setArticles] = useState('');
   const [recipe, setRecipe] = useState('');
 
@@ -33,8 +34,11 @@ const Recipe = () => {
     .then(data => setArticles(data))
   }, [articles, recipeId]);
 
+  if(!articles) 
+    return <Spinner/>
+  
   return (
-    <div className="blogPostContainer">
+      <div className="blogPostContainer">
       <Card >
         <div className="blogHeader">
           <span className="blogCategory w3-tag w3-round w3-green w3-border w3-border-white">Featured Recipe</span>
@@ -56,9 +60,10 @@ const Recipe = () => {
           <p>{recipe.ingredients}</p> 
           <h3> Method </h3>
           <p>{recipe.method}</p> 
-        </div>
+        </div> 
       </Card>
     </div>  
+    
   )
 };
 
