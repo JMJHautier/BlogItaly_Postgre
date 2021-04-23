@@ -1,27 +1,23 @@
-import React, {useState} from "react"
+import React from "react";
+import "../App.css";
 
 const SearchBar = () => {
-  const [search, setSearch] = useState(false); 
-
-  const submitSearch = (e) => {
-    e.preventDefault();
-    alert('Searched');
-}
-
-  const openSearch = () => {
-    setSearch(true); 
-  }
-
-  const searchClass = search ? 'searchInput active' : 'searchInput';
 
   return (
-    <div className="search">
-      <form onSubmit={submitSearch}>
-      <input type="text" className={searchClass} placeholder="Search"  />
-      <i  onClick={openSearch} className="searchIcon" class="fa fa-search"></i>
-      </form> 
-    </div>
-  )
-}
+    <div className="searchbarImage">
+      <div className="title">
+        <h4> Eat, Love & Travel </h4>
+        </div>
+        <div className="bg"> 
+        <input 
+        type="text" placeholder="Search" />
+        <button className="btn search-last" type="button">
+          <i class="fas fa-search"></i>
+        </button>
+        
+      </div>
+      </div>
+  );
+};
 
-export default SearchBar
+export default SearchBar;

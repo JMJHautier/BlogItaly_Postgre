@@ -5,12 +5,12 @@ import "./style.css";
 import { useParams } from "react-router-dom";
 
 
-const Recipes = (props) => {
+const Recipes = ({props,articles}) => {
   const { recipeId } = useParams();
   console.log(recipeId)
   return (
     <section className="container">
-      <Recipe  recipeId={recipeId} {...props}/>
+    <Recipe recipeId={recipeId} {...props}/>
       <SideBar />
     </section>
   );
